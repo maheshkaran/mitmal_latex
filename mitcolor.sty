@@ -1,0 +1,133 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mitcolor}[2016/03/14 MIT colors]
+
+\newif\ifcmyk
+
+\DeclareOption{cmyk}{\cmyktrue}
+\DeclareOption{rgb}{\cmykfalse}
+
+\ExecuteOptions{cmyk}
+\ProcessOptions\relax
+
+\RequirePackage{xcolor}
+
+\ifcmyk
+
+% MIT primary colors
+\definecolor{MITBlue}		{cmyk}{1.00,0.43,0.00,0.00}
+\definecolor{MITWhite}		{cmyk}{0.00,0.00,0.00,0.00}
+\definecolor{MITBlack}		{cmyk}{0.00,0.00,0.00,1.00}
+
+% MIT secondary colors
+\definecolor{MITDarkerBlue}	{cmyk}{1.00,0.54,0.04,0.19}
+\definecolor{MITDarkBlue}	{cmyk}{1.00,0.57,0.12,0.70}
+\definecolor{MITDarkGray}	{cmyk}{0.00,0.00,0.00,0.80}
+\definecolor{MITMediumGray}	{cmyk}{0.00,0.00,0.00,0.50}
+\definecolor{MITLightGray}	{cmyk}{0.00,0.00,0.00,0.20}
+
+% MIT highlight colors
+\definecolor{MITIvony}		{cmyk}{0.03,0.04,0.14,0.08}
+\definecolor{MITOrange}		{cmyk}{0.00,0.65,0.95,0.00}
+\definecolor{MITGreen}		{cmyk}{0.35,0.00,1.00,0.20}
+\definecolor{MITLightBlue}	{cmyk}{0.42,0.09,0.00,0.00}
+\definecolor{MITLighterBlue}	{cmyk}{0.65,0.19,0.01,0.04}
+
+% Additional MIT diagram colors
+\definecolor{MITPurple}		{cmyk}{0.50,1.00,0.00,0.40}
+\definecolor{MITDarkPurple}	{cmyk}{1.00,1.00,0.00,0.40}
+\definecolor{MITTurquois}	{cmyk}{1.00,0.03,0.30,0.30}
+\definecolor{MITDarkGreen}	{cmyk}{1.00,0.00,1.00,0.20}
+\definecolor{MITDarkerGreen}	{cmyk}{0.60,0.00,1.00,0.20}
+\definecolor{MITYellow}		{cmyk}{0.00,0.10,1.00,0.00}
+\definecolor{MITDarkYellow}	{cmyk}{0.00,0.30,1.00,0.00}
+\definecolor{MITLightRed}	{cmyk}{0.00,0.80,1.00,0.10}
+\definecolor{MITRed}		{cmyk}{0.10,1.00,1.00,0.10}
+\definecolor{MITDarkRed}	{cmyk}{0.00,1.00,1.00,0.40}
+
+% MIT presentation colors
+\definecolor{MITBeamerYellow}    {cmyk}{0.00,0.29,1.00,0.00}
+\definecolor{MITBeamerOrange}    {cmyk}{1.00,0.50,0.00,0.00}
+\definecolor{MITBeamerRed}       {cmyk}{0.00,0.77,0.90,0.10}
+\definecolor{MITBeamerDarkRed}   {cmyk}{0.00,0.84,0.69,0.21}
+\definecolor{MITBeamerBlue}      {cmyk}{1.00,0.40,0.00,0.00}
+\definecolor{MITBeamerLightBlue} {cmyk}{0.75,0.25,0.00,0.00}
+\definecolor{MITBeamerGreen}     {cmyk}{0.16,0.00,0.38,0.33}
+\definecolor{MITBeamerLightGreen}{cmyk}{0.25,0.00,0.36,0.21}
+
+\else
+
+% MIT primary colors
+\definecolor{MITBlue}		{rgb}{0.00,0.40,0.74}
+\definecolor{MITWhite}		{rgb}{1.00,1.00,1.00}
+\definecolor{MITBlack}		{rgb}{0.00,0.00,0.00}
+
+% MIT secondary colors
+\definecolor{MITDarkerBlue}	{rgb}{0.00,0.32,0.58}
+\definecolor{MITDarkBlue}	{rgb}{0.00,0.20,0.35}
+\definecolor{MITDarkGray}	{rgb}{0.20,0.20,0.20}
+\definecolor{MITMediumGray}	{rgb}{0.50,0.50,0.50}
+\definecolor{MITLightGray}	{rgb}{0.80,0.80,0.80}
+
+% MIT highlight colors
+\definecolor{MITIvony}		{rgb}{0.85,0.84,0.80}
+\definecolor{MITOrange}		{rgb}{0.89,0.45,0.13}
+\definecolor{MITGreen}		{rgb}{0.64,0.68,0.00}
+\definecolor{MITLightBlue}	{rgb}{0.60,0.78,0.92}
+\definecolor{MITLighterBlue}	{rgb}{0.39,0.63,0.78}
+
+% Additional MIT diagram colors
+\definecolor{MITPurple}		{rgb}{0.41,0.03,0.35}
+\definecolor{MITDarkPurple}	{rgb}{0.06,0.11,0.37}
+\definecolor{MITTurquois}	{rgb}{0.00,0.47,0.54}
+\definecolor{MITDarkGreen}	{rgb}{0.00,0.49,0.19}
+\definecolor{MITDarkerGreen}	{rgb}{0.40,0.60,0.11}
+\definecolor{MITYellow}		{rgb}{1.00,0.86,0.00}
+\definecolor{MITDarkYellow}	{rgb}{0.98,0.73,0.00}
+\definecolor{MITLightRed}	{rgb}{0.84,0.30,0.07}
+\definecolor{MITRed}		{rgb}{0.77,0.03,0.11}
+\definecolor{MITDarkRed}	{rgb}{0.61,0.05,0.09}
+
+% MIT presentation colors
+\definecolor{MITBeamerYellow}    {rgb}{1.00,0.71,0.00}
+\definecolor{MITBeamerOrange}    {rgb}{1.00,0.50,0.00}
+\definecolor{MITBeamerRed}       {rgb}{0.90,0.20,0.09}
+\definecolor{MITBeamerDarkRed}   {rgb}{0.79,0.13,0.25}
+\definecolor{MITBeamerBlue}      {rgb}{0.00,0.60,1.00}
+\definecolor{MITBeamerLightBlue} {rgb}{0.25,0.75,1.00}
+\definecolor{MITBeamerGreen}     {rgb}{0.57,0.67,0.42}
+\definecolor{MITBeamerLightGreen}{rgb}{0.71,0.79,0.51}
+
+\fi
+
+\AtBeginDocument{%
+  \@ifpackageloaded{pgfplots}{%
+    \pgfplotscreateplotcyclelist{mitcolormark}{%
+      MITDarkerBlue,every mark/.append style={fill=MITDarkerBlue},mark=square*\\%
+      MITGreen,every mark/.append style={fill=MITGreen},mark=triangle*\\%
+      MITBeamerYellow,every mark/.append style={fill=MITBeamerYellow},mark=diamond*\\%
+      MITOrange,every mark/.append style={fill=MITOrange},mark=*\\%
+      MITMediumGray,mark=star\\%
+      MITDarkerBlue,densely dashed,every mark/.append style={solid,fill=MITDarkerBlue},mark=square*\\%
+      MITGreen,densely dashed,every mark/.append style={solid,fill=MITGreen},mark=triangle*\\%
+      MITOrange,densely dashed,every mark/.append style={solid,fill=MITOrange},mark=*\\%
+      MITMediumGray,densely dashed,mark=star,every mark/.append style=solid\\%
+      MITBeamerYellow,densely dashed,every mark/.append style={solid,fill=MITBeamerYellow},mark=diamond*\\%
+    }%
+    \pgfplotscreateplotcyclelist{mitcolornomark}{%
+      MITDarkerBlue,fill=MITDarkerBlue!20\\%
+      MITOrange,fill=MITOrange!20\\%
+      MITGreen,fill=MITGreen!20\\%
+      MITBeamerYellow,fill=MITBeamerYellow!20\\%
+      MITPurple,fill=MITPurple!20\\%
+      MITMediumGray,fill=MITMediumGray!20\\%
+      MITDarkerBlue,densely dashed,fill=MITDarkerBlue!20\\%
+      MITOrange,densely dashed,fill=MITOrange!20\\%
+      MITGreen,densely dashed,fill=MITGreen!20\\%
+      MITBeamerYellow,densely dashed,fill=MITBeamerYellow!20\\%
+      MITPurple,densely dashed,fill=MITPurple!20\\%
+      MITMediumGray,densely dashed,fill=MITMediumGray!20\\%
+    }%
+  }{}%
+}%
+
+\endinput
