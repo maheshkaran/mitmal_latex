@@ -1,4 +1,4 @@
-# MITMAL reusable LaTeX style
+# MIT MAL reusable LaTeX style
 
 This folder contains a portable style package extracted from your current paper formatting.
 
