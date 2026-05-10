@@ -99,35 +99,35 @@
 
 \fi
 
-\AtBeginDocument{%
-  \@ifpackageloaded{pgfplots}{%
-    \pgfplotscreateplotcyclelist{mitcolormark}{%
-      MITDarkerBlue,every mark/.append style={fill=MITDarkerBlue},mark=square*\\%
-      MITGreen,every mark/.append style={fill=MITGreen},mark=triangle*\\%
-      MITBeamerYellow,every mark/.append style={fill=MITBeamerYellow},mark=diamond*\\%
-      MITOrange,every mark/.append style={fill=MITOrange},mark=*\\%
-      MITMediumGray,mark=star\\%
-      MITDarkerBlue,densely dashed,every mark/.append style={solid,fill=MITDarkerBlue},mark=square*\\%
-      MITGreen,densely dashed,every mark/.append style={solid,fill=MITGreen},mark=triangle*\\%
-      MITOrange,densely dashed,every mark/.append style={solid,fill=MITOrange},mark=*\\%
-      MITMediumGray,densely dashed,mark=star,every mark/.append style=solid\\%
-      MITBeamerYellow,densely dashed,every mark/.append style={solid,fill=MITBeamerYellow},mark=diamond*\\%
-    }%
-    \pgfplotscreateplotcyclelist{mitcolornomark}{%
-      MITDarkerBlue,fill=MITDarkerBlue!20\\%
-      MITOrange,fill=MITOrange!20\\%
-      MITGreen,fill=MITGreen!20\\%
-      MITBeamerYellow,fill=MITBeamerYellow!20\\%
-      MITPurple,fill=MITPurple!20\\%
-      MITMediumGray,fill=MITMediumGray!20\\%
-      MITDarkerBlue,densely dashed,fill=MITDarkerBlue!20\\%
-      MITOrange,densely dashed,fill=MITOrange!20\\%
-      MITGreen,densely dashed,fill=MITGreen!20\\%
-      MITBeamerYellow,densely dashed,fill=MITBeamerYellow!20\\%
-      MITPurple,densely dashed,fill=MITPurple!20\\%
-      MITMediumGray,densely dashed,fill=MITMediumGray!20\\%
-    }%
-  }{}%
-}%
+\makeatletter
+\@ifpackageloaded{pgfplots}{%
+  \pgfplotscreateplotcyclelist{mitcolormark}{%
+    MITDarkerBlue,every mark/.append style={fill=MITDarkerBlue},mark=square*\\%
+    MITGreen,every mark/.append style={fill=MITGreen},mark=triangle*\\%
+    MITBeamerYellow,every mark/.append style={fill=MITBeamerYellow},mark=diamond*\\%
+    MITOrange,every mark/.append style={fill=MITOrange},mark=*\\%
+    MITMediumGray,mark=star\\%
+    MITDarkerBlue,densely dashed,every mark/.append style={solid,fill=MITDarkerBlue},mark=square*\\%
+    MITGreen,densely dashed,every mark/.append style={solid,fill=MITGreen},mark=triangle*\\%
+    MITOrange,densely dashed,every mark/.append style={solid,fill=MITOrange},mark=*\\%
+    MITMediumGray,densely dashed,mark=star,every mark/.append style=solid\\%
+    MITBeamerYellow,densely dashed,every mark/.append style={solid,fill=MITBeamerYellow},mark=diamond*\\%
+  }%
+  \pgfplotscreateplotcyclelist{mitcolornomark}{%
+    MITDarkerBlue,fill=MITDarkerBlue!20\\%
+    MITOrange,fill=MITOrange!20\\%
+    MITGreen,fill=MITGreen!20\\%
+    MITBeamerYellow,fill=MITBeamerYellow!20\\%
+    MITPurple,fill=MITPurple!20\\%
+    MITMediumGray,fill=MITMediumGray!20\\%
+    MITDarkerBlue,densely dashed,fill=MITDarkerBlue!20\\%
+    MITOrange,densely dashed,fill=MITOrange!20\\%
+    MITGreen,densely dashed,fill=MITGreen!20\\%
+    MITBeamerYellow,densely dashed,fill=MITBeamerYellow!20\\%
+    MITPurple,densely dashed,fill=MITPurple!20\\%
+    MITMediumGray,densely dashed,fill=MITMediumGray!20\\%
+  }%
+}{}
+\makeatother
 
 \endinput

@@ -1,22 +1,18 @@
-# MIT MAL reusable LaTeX style
+# mitmal_latex
 
-This folder contains a portable style package extracted from your current paper formatting.
+Reusable MIT-MAL LaTeX starter files.
 
-## Files
+## Included files
+- `main.tex` — initial blank document
+- `llncs.cls`
+- `mitmalstyle.sty`
+- `mitmalpackages.sty`
+- `mitmalfigures.sty`
+- `mitcolor.sty`
 
-- `mitmalstyle.sty`: main reusable style package
-- `mitmalpackages.sty`: reusable package stack (from `packages.sty` + preamble)
-- `mitmalfigures.sty`: reusable image/plot definitions (from `include/customization/*`)
-- `mitcolor.sty`: MIT color palette and PGFPlots cycles used by the style
-
-## Use in any article type
-
-Copy these `.sty` files into the target project, then in your main `.tex` file:
-
-```tex
-\usepackage{mitmalstyle}
+## Build
+```bash
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-This works with classes like `article`, `report`, and `llncs`.
-
-`splncs04.bst` is bibliography-format specific (Springer LNCS), so it is not included in the generic style package.
+If you add a bibliography, run BibTeX as usual.
