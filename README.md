@@ -10,6 +10,12 @@ Reusable MIT-MAL LaTeX starter files.
 - `mitmalfigures.sty`
 - `mitcolor.sty`
 
+## Editorial macros (`mitmalstyle.sty`)
+- `\todo{...}` / `\todoIL{...}` — inline / margin yellow notes
+- `\rfc{...}` / `\rfcIL{...}` — inline / margin blue request-for-comment notes
+- `\comment{color}{name}{text}` — inline note tinted `color!30`, prefixed `@name:`
+- `\commentKaran{...}`, `\commentAll{...}` — shortcuts for the above
+
 ## Page layout
 `llncs.cls` is patched (lines marked "Local edit") to roughly one-inch margins on US letter:
 `\textwidth` 6.5in, `\textheight` 8.75in, zero side margins, `\topmargin` -0.25in.

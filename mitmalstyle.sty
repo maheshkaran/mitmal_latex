@@ -20,6 +20,14 @@
 \NewDocumentCommand{\rfc}{m}{\mitmaltodo[inline,color=MITBlue!30]{#1}}
 \NewDocumentCommand{\rfcIL}{m}{\mitmaltodo[color=MITBlue!30]{#1}}
 
+% Attributed inline comments: \comment{color}{name}{text} renders an inline
+% note tinted with the given MIT color and prefixed by "@name:".
+% Per-author shortcuts follow; add more in a document preamble with, e.g.,
+%   \NewDocumentCommand{\commentJane}{m}{\comment{MITGreen}{Jane}{#1}}
+\NewDocumentCommand{\comment}{m m m}{\mitmaltodo[inline,color=#1!30]{\textbf{@#2:} #3}}
+\NewDocumentCommand{\commentKaran}{m}{\comment{MITBlue}{Karan}{#1}}
+\NewDocumentCommand{\commentAll}{m}{\comment{MITPurple}{All}{#1}}
+
 % Force abbreviated cleveref names, including sentence starts.
 \crefname{section}{Sec.}{Secs.}
 \Crefname{section}{Sec.}{Secs.}
