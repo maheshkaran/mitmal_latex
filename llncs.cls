@@ -52,8 +52,10 @@
 \RequirePackage{multicol} % needed for the list of participants, index
 \RequirePackage{aliascnt}
 
-\setlength{\textwidth}{12.2cm}
-\setlength{\textheight}{19.3cm}
+% Local edit (K. Mahesh, 2026-09-11): widened from the LNCS block (12.2cm x 19.3cm)
+% to roughly one-inch margins on US letter.
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.75in}
 \renewcommand\@pnumwidth{2em}
 \renewcommand\@tocrmarg{3.5em}
 %
@@ -231,8 +233,10 @@
 \widowpenalty=10000
 \clubpenalty=10000
 
-\setlength\oddsidemargin   {63\p@}
-\setlength\evensidemargin  {63\p@}
+% Local edit: side margins were 1in + 63pt; now 1in on both sides.
+\setlength\oddsidemargin   {0\p@}
+\setlength\evensidemargin  {0\p@}
+\setlength\topmargin       {-0.25in}
 \setlength\marginparwidth  {90\p@}
 
 \setlength\headsep   {16\p@}

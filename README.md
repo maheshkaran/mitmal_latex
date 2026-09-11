@@ -10,6 +10,11 @@ Reusable MIT-MAL LaTeX starter files.
 - `mitmalfigures.sty`
 - `mitcolor.sty`
 
+## Page layout
+`llncs.cls` is patched (lines marked "Local edit") to roughly one-inch margins on US letter:
+`\textwidth` 6.5in, `\textheight` 8.75in, zero side margins, `\topmargin` -0.25in.
+The stock LNCS block is 12.2cm x 19.3cm with 1in + 63pt side margins.
+
 ## Build
 ```bash
 pdflatex -interaction=nonstopmode -halt-on-error main.tex
